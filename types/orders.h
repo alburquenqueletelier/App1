@@ -1,5 +1,5 @@
-#ifndef CSV_CONVERT   // verifica si existe csv_convert.h
-#define CSV_CONVERT   // sino existe, define csv_convert.h
+#ifndef ORDERS_H
+#define ORDERS_H
 
 typedef struct Order
 {
@@ -19,6 +19,4 @@ typedef struct Order
     char pizza_name[50];
 } Order;
 
-int csv_convert(char *file_name, Order *orders, int *index);   
-
-#endif  // end of check intercambio.h
+#endif 
