@@ -3,6 +3,7 @@
 #include <string.h>
 // include metrics //
 #include "metrics/pms/pms.h"
+#include "metrics/pls/pls.h"
 
 // include librería utils //
 #include "utils/csv_convert.h"
@@ -32,7 +33,7 @@ int main(int argc, char *argv[]) {
         
         // pls: Pizza menos vendida
         if (strcmp(argv[argv_i],"pls") == 0){
-            printf("en desarrollo\n");
+            pls(sales, index);
         }
 
         // Crear las métricas y añadirlas. 
