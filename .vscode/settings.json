@@ -1,0 +1,11 @@
+{
+    "files.associations": {
+        "sales.h": "c",
+        "orders.h": "c",
+        "stdio.h": "c",
+        "time.h": "c",
+        "dates.h": "c",
+        "string.h": "c",
+        "get_unique_dates_data.h": "c"
+    }
+}
