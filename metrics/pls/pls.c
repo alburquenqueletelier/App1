@@ -5,7 +5,7 @@ void pls(Sale *sales, int index){
     
     Sale sale = sales[0];
     for (int i=0; i<index; i++){
-        if(sale.quantity < sales[i].quantity){
+        if(sale.quantity > sales[i].quantity){
             sale = sales[i];
         }
     }
