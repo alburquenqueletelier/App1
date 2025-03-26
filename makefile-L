@@ -26,7 +26,7 @@ COMPILER = gcc
 COMPILER_FLAGS = -Wall -g		
 ## OBJECTS es una lista de archivos objeto que se crean en base a los archivos fuentes
 ## con el objeto de luego enlazarlos para crear el archivo final (app1)
-OBJECTS = main.o utils/csv_convert.o utils/get_sales_by_pizza.o metrics/pms/pms.o metrics/pls/pls.o
+OBJECTS = main.o utils/csv_convert.o utils/get_sales_by_pizza.o utils/get_unique_dates_data.o metrics/pms/pms.o metrics/pls/pls.o metrics/dms/dms.o
 
 # Regla para compilar el programa
 all: app1 clean_objects
@@ -34,7 +34,7 @@ all: app1 clean_objects
 app1: $(OBJECTS)
 	$(COMPILER) $(OBJECTS) -o app1
 
-main.o: main.c utils/csv_convert.h utils/get_sales_by_pizza.h metrics/pms/pms.h metrics/pls/pls.h
+main.o: main.c utils/csv_convert.h utils/get_sales_by_pizza.h utils/get_unique_dates_data.h metrics/pms/pms.h metrics/pls/pls.h metrics/dms/dms.h
 	$(COMPILER) $(COMPILER_FLAGS) -c main.c
 
 utils/csv_convert.o: utils/csv_convert.c utils/csv_convert.h
@@ -43,11 +43,17 @@ utils/csv_convert.o: utils/csv_convert.c utils/csv_convert.h
 utils/get_sales_by_pizza.o: utils/get_sales_by_pizza.c utils/get_sales_by_pizza.h
 	$(COMPILER) $(COMPILER_FLAGS) -c utils/get_sales_by_pizza.c -o utils/get_sales_by_pizza.o
 
+utils/get_unique_dates_data.o: utils/get_unique_dates_data.c utils/get_unique_dates_data.h
+	$(COMPILER) $(COMPILER_FLAGS) -c utils/get_unique_dates_data.c -o utils/get_unique_dates_data.o
+
 metrics/pms/pms.o: metrics/pms/pms.c metrics/pms/pms.h
 	$(COMPILER) $(COMPILER_FLAGS) -c metrics/pms/pms.c -o metrics/pms/pms.o
 
 metrics/pls/pls.o: metrics/pls/pls.c metrics/pls/pls.h
 	$(COMPILER) $(COMPILER_FLAGS) -c metrics/pls/pls.c -o metrics/pls/pls.o
+
+metrics/dms/dms.o: metrics/dms/dms.c metrics/dms/dms.h
+	$(COMPILER) $(COMPILER_FLAGS) -c metrics/dms/dms.c -o metrics/dms/dms.o
 
 clean_objects:
 	find . -type f -name "*.o" -exec rm -f {} \;
