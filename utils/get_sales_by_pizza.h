@@ -4,6 +4,6 @@
 #include "../types/orders.h"
 #include "../types/sales.h"
 
-void get_sales_by_pizza(Order *orders, Sale *sales, int index);
+int get_sales_by_pizza(Order *orders, Sale **sales, int index);
 
 #endif  // end of check intercambio.h

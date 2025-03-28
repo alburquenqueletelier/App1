@@ -5,6 +5,7 @@
 #include "metrics/pms/pms.h"
 #include "metrics/pls/pls.h"
 #include "metrics/dms/dms.h"
+#include "metrics/dls/dls.h"
 
 // include librería utils //
 #include "utils/csv_convert.h"
@@ -24,28 +25,33 @@ int main(int argc, char *argv[]) {
     csv_convert(argv[1], &orders, &index);
 
     // Obtener array de ventas por pizza
-    Sale *sales=malloc(sizeof(Sale) * index);  // No es lo más óptimo ya que el arreglo de ventas por pizza puede ser menor que las filas del archivo.csv
-    get_sales_by_pizza(orders, sales, index);
+    Sale *sales=malloc(sizeof(Sale) * index);  // Se reajusta la memoria en la función
+    int sales_length = get_sales_by_pizza(orders, &sales, index);
 
     // Obtener array de ventas e ingresos totales por día
-    Date_sale *dates=malloc(sizeof(Date_sale)*index); // No óptimo porque días casi siempre menor o igual que maximos registros del csv
-    get_unique_dates_data(orders, dates, index);
+    Date_sale *dates=malloc(sizeof(Date_sale)*index);   // Se reajusta la memoria en la función
+    int dates_length = get_unique_dates_data(orders, &dates, index);
 
     // Ejecutar las métricas en el orden que se ingresaron en argv
     for(int argv_i=2; argv_i<argc; argv_i++){
         // pms: Pizza más vendida
         if (strcmp(argv[argv_i],"pms") == 0){
-            pms(sales, index);
+            pms(sales, sales_length);
         }
         
         // pls: Pizza menos vendida
         if (strcmp(argv[argv_i],"pls") == 0){
-            pls(sales, index);
+            pls(sales, sales_length);
         }
 
         // dms: Día más vendido
         if (strcmp(argv[argv_i], "dms") == 0){
-            dms(dates, index);
+            dms(dates, dates_length);
+        }
+        
+        // dms: Día menos vendido
+        if (strcmp(argv[argv_i], "dls") == 0){
+            dls(dates, dates_length);
         }
 
         // Crear las métricas y añadirlas. 

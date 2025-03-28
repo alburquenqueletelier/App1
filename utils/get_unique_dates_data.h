@@ -3,6 +3,6 @@
 #include "../types/orders.h"
 #include "../types/dates.h"
 
-void get_unique_dates_data(Order *orders, Date_sale *dates, int index);
+int get_unique_dates_data(Order *orders, Date_sale **dates, int index);
 
 #endif
