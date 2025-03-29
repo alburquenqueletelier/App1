@@ -6,6 +6,7 @@
 #include "metrics/pls/pls.h"
 #include "metrics/dms/dms.h"
 #include "metrics/dls/dls.h"
+#include "metrics/hp/hp.h"
 
 // include librería utils //
 #include "utils/csv_convert.h"
@@ -52,6 +53,10 @@ int main(int argc, char *argv[]) {
         // dms: Día menos vendido
         if (strcmp(argv[argv_i], "dls") == 0){
             dls(dates, dates_length);
+        }
+
+        if(strcmp(argv[argv_i], "hp") == 0){
+            hp(orders, index);
         }
 
         // Crear las métricas y añadirlas. 
