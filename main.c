@@ -54,7 +54,7 @@ int main(int argc, char *argv[]) {
         if (strcmp(argv[argv_i], "dls") == 0){
             dls(dates, dates_length);
         }
-
+        // hp: Cantidad de pizzas vendidas por categoria
         if(strcmp(argv[argv_i], "hp") == 0){
             hp(orders, index);
         }
