@@ -28,11 +28,11 @@ COMPILER_FLAGS = -Wall -g
 ## con el objeto de luego enlazarlos para crear el archivo final (app1)
 OBJECTS = main.o 
 OBJECTS_UTILS = utils/csv_convert.o utils/get_sales_by_pizza.o utils/get_unique_dates_data.o
-OBJECTS_METRICS = metrics/pms/pms.o metrics/pls/pls.o metrics/dms/dms.o metrics/dls/dls.o
+OBJECTS_METRICS = metrics/pms/pms.o metrics/pls/pls.o metrics/dms/dms.o metrics/dls/dls.o metrics/apd/apd.o
 
 # HEADERS es una lista  de archivos de cabezera o interfaces para importar modulos 
 HEADERS_UTILS = utils/csv_convert.h utils/get_sales_by_pizza.h utils/get_unique_dates_data.h
-HEADERS_METRICS = metrics/pms/pms.h metrics/pls/pls.h metrics/dms/dms.h metrics/dls/dls.h
+HEADERS_METRICS = metrics/pms/pms.h metrics/pls/pls.h metrics/dms/dms.h metrics/dls/dls.h metrics/apd/apd.h
 # Regla para compilar el programa
 all: app1 clean_objects
 
@@ -62,6 +62,9 @@ metrics/dms/dms.o: metrics/dms/dms.c metrics/dms/dms.h
 
 metrics/dls/dls.o: metrics/dls/dls.c metrics/dls/dls.h
 	$(COMPILER) $(COMPILER_FLAGS) -c metrics/dls/dls.c -o metrics/dls/dls.o
+
+metrics/apd/apd.o: metrics/apd/apd.c metrics/apd/apd.h
+	$(COMPILER) $(COMPILER_FLAGS) -c metrics/apd/apd.c -o metrics/apd/apd.o
 
 clean_objects:
 	del /s /q *.o;
