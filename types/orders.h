@@ -15,8 +15,9 @@ typedef struct Order
     char order_time[9];
     char pizza_size[3];
     char pizza_category[20];
-    char pizza_ingredients[50];
+    char pizza_ingredients[20][40];
     char pizza_name[50];
 } Order;
 
 #endif 
+

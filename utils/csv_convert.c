@@ -7,6 +7,7 @@
 int csv_convert(char *file_name, Order **orders, int *index)
 { // llena un array con estructuras  para cada orden
     char *data;
+    char *ingredient; // Puntero a ocupar en la separacion de ingredientes
     char buffer[1000];
 
     FILE *csv;
@@ -77,8 +78,46 @@ int csv_convert(char *file_name, Order **orders, int *index)
         data = strtok(NULL, ",");
         strcpy((*orders)[*index].pizza_category, data);
 
-        data = strtok(NULL, "\""); //
-        strcpy((*orders)[*index].pizza_ingredients, data);
+        // Separacion de ingredientes 
+        data = strtok(NULL, "\""); // Los ingredientes estan delimitados por comillas
+
+        // Puntero a la cadena de ingredientes
+        char *ingredients_copy = strdup(data);
+        // El puntero ingredient sera util para apuntar a las comas que separan cada ingrediente
+        ingredient = ingredients_copy;
+
+
+        int i = 0; // declarar i previamente nos permitira usar esto como indice para el ultimo ingrediente, el que no termina con coma
+
+        // Ciclo para cada ingrediente
+        for(i = 0;i < 20;i++){
+
+            ingredient = strchr(ingredient,','); // ingredient apunta a la primera coma
+
+            if(ingredient == NULL){ // si no se encuentran mas comas
+                break;
+            }
+
+            *ingredient = '\0'; // convertir la coma en un string terminator para tener una cadena con solo un ingrediente
+            //
+            //printf("Ingrediente %d: %s\n", i, ingredients_copy);
+            strcpy((*orders)[*index].pizza_ingredients[i],ingredients_copy); // asignar el ingrediente al array de ingredientes en la estructura
+
+            ingredient++; // avanzamos el puntero al primer caracter del siguiente ingrediente
+
+            // si el ingrediente comienza con un espacio en blanco, avanza al siguiente caracter
+            if((*ingredient) == ' '){
+                ingredient++; 
+            }
+
+            ingredients_copy = ingredient; // hacemos que ingredients_copy tambien apunte al primer caracter del ingrediente para luego poder mover ingredient
+        }
+
+        // para los ingredientes que van despues de la ultima coma
+
+        //printf("Ingrediente %d: %s\n", i, ingredients_copy);
+        strcpy((*orders)[*index].pizza_ingredients[i],ingredients_copy); // asignar el ingrediente al array de ingredientes en la estructura
+
 
         data = strtok(NULL, ",");
         strcpy((*orders)[*index].pizza_name, data);
