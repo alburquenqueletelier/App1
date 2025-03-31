@@ -7,6 +7,7 @@
 #include "metrics/dms/dms.h"
 #include "metrics/dls/dls.h"
 #include "metrics/hp/hp.h"
+#include "metrics/apd/apd.h"
 
 // include librería utils //
 #include "utils/csv_convert.h"
@@ -50,13 +51,18 @@ int main(int argc, char *argv[]) {
             dms(dates, dates_length);
         }
         
-        // dms: Día menos vendido
+        // dls: Día menos vendido
         if (strcmp(argv[argv_i], "dls") == 0){
             dls(dates, dates_length);
         }
         // hp: Cantidad de pizzas vendidas por categoria
         if(strcmp(argv[argv_i], "hp") == 0){
             hp(orders, index);
+        }
+
+        // apd: Cantidad de pizzas promedio por dia
+        if(strcmp(argv[argv_i], "apd") == 0){
+            apd(dates, dates_length);
         }
 
         // Crear las métricas y añadirlas. 
