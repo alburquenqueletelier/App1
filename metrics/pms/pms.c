@@ -7,6 +7,8 @@ void pms(Sale *sales, int index){
     for (int i=0; i<index; i++){
         if(sale.quantity < sales[i].quantity){
             sale = sales[i];
+            // printf("sales[%d]: \n", i);
+            // printf("id:%d, name: %s, quantity: %d \n", sales[i].id, sales[i].name, sales[i].quantity);
         }
     }
     // Si hay una pizza con la misma cantidad entonces va a imprimir la primera que 

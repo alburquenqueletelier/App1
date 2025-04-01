@@ -8,7 +8,7 @@ int csv_convert(char *file_name, Order **orders, int *index)
 { // llena un array con estructuras  para cada orden
     char *data;
     char *ingredient; // Puntero a ocupar en la separacion de ingredientes
-    char buffer[1000];
+    char buffer[2000];
 
     FILE *csv;
 

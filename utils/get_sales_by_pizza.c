@@ -16,14 +16,14 @@ int get_sales_by_pizza(Order *orders, Sale **sales, int index){
     for(int i=0; i<index; i++){
         int not_found_pizza = 0;
         for (int j = 0; j<sales_index; j++){
-            if(orders[i].pizza_id == (*sales)[j].id){
+            if(strcmp(orders[i].pizza_name_id, (*sales)[j].pizza_name_id) == 0){
                 (*sales)[j].quantity += orders[i].quantity;
                 not_found_pizza = 1;
                 break;
             }
         }
         if (not_found_pizza == 0) {
-            (*sales)[sales_index].id = orders[i].pizza_id;
+            strcpy((*sales)[sales_index].pizza_name_id, orders[i].pizza_name_id);
             strcpy((*sales)[sales_index].name, orders[i].pizza_name);
             (*sales)[sales_index].quantity = orders[i].quantity;
             sales_index++; 

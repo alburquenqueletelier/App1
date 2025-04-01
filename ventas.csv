@@ -4,3 +4,14 @@ pizza_id,order_id,pizza_name_id,quantity,order_date,order_time,unit_price,total_
 3.00,2.00,five_cheese_l,3.00,2/1/2015,11:57:40,18.50,18.50,L,Veggie,"Mozzarella Cheese, Provolone Cheese, Smoked Gouda Cheese, Romano Cheese, Blue Cheese, Garlic",The Five Cheese Pizza
 4.00,3.00,dummy_p_x,1.00,2/1/2015,11:57:40,18.50,18.50,L,Veggie,"Mozzarella Cheese, Provolone Cheese, Smoked Gouda Cheese, Romano Cheese, Blue Cheese, Garlic",The Five Cheese Pizza
 5.00,4.00,dummy_p_y,1.00,3/1/2015,11:57:40,14.50,14.50,L,Veggie,"Mozzarella Cheese, Provolone Cheese, Smoked Gouda Cheese, Romano Cheese, Blue Cheese, Garlic",The Five Cheese Pizza
+6,4,spicy_italian_xl,3,04/05/2023,17:09:34,17.92,53.76,XL,Specialty,"Spicy Sausage, Pepperoni, Jalapeños, Mozzarella Cheese",The Spicy Italian Pizza
+7,4,spicy_italian_xl,1,05/19/2023,19:54:40,19.33,19.33,XL,Specialty,"Spicy Sausage, Pepperoni, Jalapeños, Mozzarella Cheese",The Spicy Italian Pizza
+8,4,spicy_italian_s,2,07/02/2023,12:53:08,9.29,18.58,S,Specialty,"Spicy Sausage, Pepperoni, Jalapeños, Mozzarella Cheese",The Spicy Italian Pizza
+9,5,four_cheese_xl,2,03/07/2023,16:01:05,17.15,34.3,XL,Veggie,"Mozzarella Cheese, Parmesan Cheese, Gorgonzola Cheese, Ricotta Cheese",The Four Cheese Pizza
+10,6,pepperoni_l,1,02/22/2023,12:16:37,15.27,15.27,L,Classic,"Pepperoni, Mozzarella Cheese",The Pepperoni Pizza
+11,6,meat_lovers_m,3,07/21/2023,18:58:56,12.24,36.72,M,Specialty,"Pepperoni, Sausage, Bacon, Ham, Mozzarella Cheese",The Meat Lovers Pizza
+12,6,spicy_italian_s,2,04/29/2023,15:06:44,9.69,19.38,S,Specialty,"Spicy Sausage, Pepperoni, Jalapeños, Mozzarella Cheese",The Spicy Italian Pizza
+13,7,five_cheese_m,3,01/15/2023,19:35:43,13.63,40.89,M,Veggie,"Mozzarella Cheese, Provolone Cheese, Smoked Gouda Cheese, Romano Cheese, Blue Cheese, Garlic",The Five Cheese Pizza
+14,7,hawaiian_m,1,01/29/2023,20:07:28,14.04,14.04,M,Classic,"Sliced Ham, Pineapple, Mozzarella Cheese",The Hawaiian Pizza
+15,8,classic_dlx_m,2,07/02/2023,21:48:39,14.99,29.98,M,Classic,"Pepperoni, Mushrooms, Red Onions, Red Peppers, Bacon",The Classic Deluxe Pizza
+16,8,four_cheese_m,3,03/18/2023,17:18:51,14.47,43.41,M,Veggie,"Mozzarella Cheese, Parmesan Cheese, Gorgonzola Cheese, Ricotta Cheese",The Four Chees

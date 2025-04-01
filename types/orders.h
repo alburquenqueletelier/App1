@@ -11,7 +11,7 @@ typedef struct Order
     float total_price;
 
     char pizza_name_id[50];
-    char order_date[10];
+    char order_date[11];
     char order_time[9];
     char pizza_size[3];
     char pizza_category[20];
