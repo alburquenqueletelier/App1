@@ -1,6 +1,8 @@
 # Linux executable
 app1
 
+# .vscode
+.vscode/
 
 # Prerequisites
 *.d
