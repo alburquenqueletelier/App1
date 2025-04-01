@@ -8,6 +8,7 @@
 #include "metrics/dls/dls.h"
 #include "metrics/hp/hp.h"
 #include "metrics/apd/apd.h"
+#include "metrics/dmsp/dmsp.h"
 
 // include librería utils //
 #include "utils/csv_convert.h"
@@ -65,6 +66,10 @@ int main(int argc, char *argv[]) {
             apd(dates, dates_length);
         }
 
+        // dmsp: Fecha con más ventas en términos de cantidad de pizza
+        if (strcmp(argv[argv_i], "dmsp") == 0){
+            dmsp(dates, dates_length);
+        }
         // Crear las métricas y añadirlas. 
 
         
