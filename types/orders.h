@@ -6,6 +6,7 @@ typedef struct Order
     int pizza_id;
     int order_id;
     int quantity;
+    int ingredient_count;
 
     float unit_price;
     float total_price;

@@ -88,6 +88,7 @@ int csv_convert(char *file_name, Order **orders, int *index)
 
 
         int i = 0; // declarar i previamente nos permitira usar esto como indice para el ultimo ingrediente, el que no termina con coma
+        (*orders)[*index].ingredient_count = 0;
 
         // Ciclo para cada ingrediente
         for(i = 0;i < 20;i++){
@@ -99,9 +100,10 @@ int csv_convert(char *file_name, Order **orders, int *index)
             }
 
             *ingredient = '\0'; // convertir la coma en un string terminator para tener una cadena con solo un ingrediente
-            //
+
             //printf("Ingrediente %d: %s\n", i, ingredients_copy);
             strcpy((*orders)[*index].pizza_ingredients[i],ingredients_copy); // asignar el ingrediente al array de ingredientes en la estructura
+            (*orders)[*index].ingredient_count++;
 
             ingredient++; // avanzamos el puntero al primer caracter del siguiente ingrediente
 
@@ -117,6 +119,7 @@ int csv_convert(char *file_name, Order **orders, int *index)
 
         //printf("Ingrediente %d: %s\n", i, ingredients_copy);
         strcpy((*orders)[*index].pizza_ingredients[i],ingredients_copy); // asignar el ingrediente al array de ingredientes en la estructura
+        (*orders)[*index].ingredient_count++;
 
 
         data = strtok(NULL, ",");
