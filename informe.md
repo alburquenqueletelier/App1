@@ -180,10 +180,18 @@ Que la lectura de archivos en C, si bien tiene una complejidad mayor a lenguajes
 En cuanto al cálculo de las métricas nos permitió entender como se pueden abordar problemas complejos de manera que se puedan dividir en problemas más pequeños. En este caso, creamos variables con información necesaria para poder encontrar lo que la métrica necesita. Por ejemplo, para encontrar la pizza más vendida, necesitamos saber la cantidad de pizzas vendidas por cada tipo de pizza. Esto transforma el problema a una función de búsqueda con criterio de maximización. 
 
 ### Joaquín
-
+1. ¿Qué fue lo más complejo o interesante de la tarea?
+2. ¿Cómo enfrentaron los errores, pruebas y debugging?
+3. ¿Qué lecciones aprendieron al implementar en C este tipo de lectura de archivos y cálculos de métricas?
 ### Eduardo
-
+1. ¿Qué fue lo más complejo o interesante de la tarea?
+2. ¿Cómo enfrentaron los errores, pruebas y debugging?
+3. ¿Qué lecciones aprendieron al implementar en C este tipo de lectura de archivos y cálculos de métricas?
 ### Benjamín
+1. ¿Qué fue lo más complejo o interesante de la tarea?
+2. ¿Cómo enfrentaron los errores, pruebas y debugging?
+3. ¿Qué lecciones aprendieron al implementar en C este tipo de lectura de archivos y cálculos de métricas?
+
 
 # Referencias
 
