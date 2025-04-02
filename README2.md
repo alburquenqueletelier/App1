@@ -1,9 +1,11 @@
 # Lenguaje y Paradigma de Programación
 
-Universidad Adolfo Ibáñez - Viña del Mar
-2025
+Universidad Adolfo Ibáñez - Viña del Mar - 2025
+
 Clase: Lenguaje y Paradigma de la programación
+
 Sección: 1
+
 Profesor/a: Paulina González
 
 # Integrantes
@@ -47,5 +49,9 @@ En consola ejecutar:
 ./app1 ventas.csv dms pls # other metrics
 ```
 
+<<<<<<< HEAD
 Para más información sobre el uso ver el archivo [informe](link_informe)
 [link_informe]:informe.md
+=======
+Para más información sobre el uso ver el archivo [informe](informe.md)
+>>>>>>> 11531b7 (Se agrega README2 e informe)
