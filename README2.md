@@ -47,5 +47,4 @@ En consola ejecutar:
 ./app1 ventas.csv dms pls # other metrics
 ```
 
-Para más información sobre el uso ver el archivo [informe][link_informe]
-[link_informe]:informe.md
+Para más información sobre el uso ver el archivo [informe][informe.md]
