@@ -1,0 +1,44 @@
+```
+└── 📁App1
+    └── 📁metrics
+        └── 📁apd
+            └── apd.c
+            └── apd.h
+        └── 📁dls
+            └── dls.c
+            └── dls.h
+        └── 📁dms
+            └── dms.c
+            └── dms.h
+        └── 📁hp
+            └── hp.c
+            └── hp.h
+        └── 📁pls
+            └── pls.c
+            └── pls.h
+        └── 📁pms
+            └── pms.c
+            └── pms.h
+    └── 📁types
+        └── dates.h
+        └── orders.h
+        └── sales.h
+    └── 📁utils
+        └── csv_convert.c
+        └── csv_convert.h
+        └── get_sales_by_pizza.c
+        └── get_sales_by_pizza.h
+        └── get_unique_dates_data.c
+        └── get_unique_dates_data.h
+    └── .gitignore
+    └── app1
+    └── diagrama_flujo.jpg
+    └── informe.md
+    └── main.c
+    └── makefile-L
+    └── makefile-W
+    └── README.md
+    └── README2.md
+    └── ventas_large.csv
+    └── ventas.csv
+```
