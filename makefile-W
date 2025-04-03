@@ -79,7 +79,7 @@ metrics/dlsp/dlsp.o: metrics/dlsp/dlsp.c metrics/dlsp/dlsp.h
 	$(COMPILER) $(COMPILER_FLAGS) -c metrics/dlsp/dlsp.c -o metrics/dlsp/dlsp.o
 
 metrics/apo/apo.o: metrics/apo/apo.c metrics/apo/apo.h
-	$(COMPILER) $(COMPILER_FLAGS) -c metrics/apo/apo.c -o metric/apo/apo.o
+	$(COMPILER) $(COMPILER_FLAGS) -c metrics/apo/apo.c -o metrics/apo/apo.o
 
 clean_objects:
 	del /s /q *.o;
