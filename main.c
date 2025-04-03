@@ -83,6 +83,10 @@ int main(int argc, char *argv[]) {
             dlsp(dates, dates_length);
         }
 
+        //apo: Promedio de pizzas por orden
+        if(strcmp(argv[argv_i], "apo") == 0){
+            apo(orders, index);
+        }
         // Crear las métricas y añadirlas. 
 
         
