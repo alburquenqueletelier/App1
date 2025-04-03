@@ -10,6 +10,7 @@
 #include "metrics/apd/apd.h"
 #include "metrics/dmsp/dmsp.h"
 #include "metrics/ims/ims.h"
+#include "metrics/dlsp/dlsp.h"
 
 // include librería utils //
 #include "utils/csv_convert.h"
@@ -76,6 +77,12 @@ int main(int argc, char *argv[]) {
         if(strcmp(argv[argv_i], "ims") == 0){
             ims(orders, index);
         }
+
+        //dlsp: Fecha con menos ventas en términos de cantidad de pizza
+        if(strcmp(argv[argv_i], "dlsp") == 0){
+            dlsp(dates, dates_length);
+        }
+
         // Crear las métricas y añadirlas. 
 
         
