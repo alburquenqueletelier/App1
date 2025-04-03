@@ -8,6 +8,7 @@
 #include "metrics/dls/dls.h"
 #include "metrics/hp/hp.h"
 #include "metrics/apd/apd.h"
+#include "metrics/apo/apo.h"
 #include "metrics/dmsp/dmsp.h"
 #include "metrics/ims/ims.h"
 #include "metrics/dlsp/dlsp.h"

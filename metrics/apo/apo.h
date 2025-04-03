@@ -3,6 +3,6 @@
 
 #include "../../types/orders.h"
 
-void hp(Order *orders, int index);
+void apo(Order *orders, int index);
 
 #endif
