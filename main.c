@@ -30,34 +30,29 @@ int main(int argc, char *argv[]) {
     int index = 0;
     csv_convert(argv[1], &orders, &index);
 
-    // Obtener array de ventas por pizza
-    Sale *sales=malloc(sizeof(Sale) * index);  // Se reajusta la memoria en la función
-    int sales_length = get_sales_by_pizza(orders, &sales, index);
 
-    // Obtener array de ventas e ingresos totales por día
-    Date_sale *dates=malloc(sizeof(Date_sale)*index);   // Se reajusta la memoria en la función
-    int dates_length = get_unique_dates_data(orders, &dates, index);
+    //Punteros a funcion
 
     // Ejecutar las métricas en el orden que se ingresaron en argv
     for(int argv_i=2; argv_i<argc; argv_i++){
         // pms: Pizza más vendida
         if (strcmp(argv[argv_i],"pms") == 0){
-            pms(sales, sales_length);
+            pms(orders, index);
         }
         
         // pls: Pizza menos vendida
         if (strcmp(argv[argv_i],"pls") == 0){
-            pls(sales, sales_length);
+            pls(orders, index);
         }
 
         // dms: Día más vendido
         if (strcmp(argv[argv_i], "dms") == 0){
-            dms(dates, dates_length);
+            dms(orders, index);
         }
         
         // dls: Día menos vendido
         if (strcmp(argv[argv_i], "dls") == 0){
-            dls(dates, dates_length);
+            dls(orders, index);
         }
         // hp: Cantidad de pizzas vendidas por categoria
         if(strcmp(argv[argv_i], "hp") == 0){
@@ -66,12 +61,12 @@ int main(int argc, char *argv[]) {
 
         // apd: Cantidad de pizzas promedio por dia
         if(strcmp(argv[argv_i], "apd") == 0){
-            apd(dates, dates_length);
+            apd(orders, index);
         }
 
         // dmsp: Fecha con más ventas en términos de cantidad de pizza
         if (strcmp(argv[argv_i], "dmsp") == 0){
-            dmsp(dates, dates_length);
+            dmsp(orders, index);
         }
 
         // ims: Ingrediente mas vendido
@@ -81,7 +76,7 @@ int main(int argc, char *argv[]) {
 
         //dlsp: Fecha con menos ventas en términos de cantidad de pizza
         if(strcmp(argv[argv_i], "dlsp") == 0){
-            dlsp(dates, dates_length);
+           dlsp(orders, index);
         }
 
         //apo: Promedio de pizzas por orden
@@ -109,10 +104,7 @@ int main(int argc, char *argv[]) {
     //     orders[i].pizza_ingredients,
     //     orders[i].pizza_name);
     // }
-
     free(orders);
-    free(sales);
-    free(dates);
 
     return 0;
 };

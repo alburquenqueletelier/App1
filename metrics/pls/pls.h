@@ -1,8 +1,8 @@
 #ifndef PLS_H
 #define PLS_H
 
-#include "../../types/sales.h"
+#include "../../types/orders.h"
 
-void pls(Sale *sales, int index);
+void pls(Order *orders, int index);
 
 #endif

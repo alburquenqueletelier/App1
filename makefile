@@ -1,0 +1,89 @@
+################################################
+################ Para compilar ################
+################################################
+## Para compilar ejecute el siguiente comando en la terminal:
+## make
+## Recuerde que debe estar en la carpeta raíz del proyecto. 
+
+################################################
+################ Agregar script ################
+################################################
+## Instrucciones para agregar un nuevo script:
+## 1. Agregar carpeta/nombre_del_archivo.o en la sección "OBJECTS".
+## 2. Antes de la regla "clean", agregar:
+##    carpeta/nombre_del_archivo.o: carpeta/nombre_del_archivo.c carpeta/nombre_del_archivo.h
+## 3. Luego, agregar:
+##   	$(COMPILER) $(COMPILER_FLAGS) -c carpeta/nombre_del_archivo.c -o carpeta/nombre_del_archivo.o
+
+############################################################
+################ Instrucciones compilador ################
+############################################################
+
+## Acá se definen variables de configuración
+COMPILER = gcc
+## -Wall dice al compilador que muestre todos los warnings para mejorar el código
+## -g permite depurar el código
+COMPILER_FLAGS = -Wall -g		
+## OBJECTS es una lista de archivos objeto que se crean en base a los archivos fuentes
+## con el objeto de luego enlazarlos para crear el archivo final (app1)
+OBJECTS = main.o 
+OBJECTS_UTILS = utils/csv_convert.o utils/get_sales_by_pizza.o utils/get_unique_dates_data.o
+OBJECTS_METRICS = metrics/pms/pms.o metrics/pls/pls.o metrics/dms/dms.o metrics/dls/dls.o metrics/apd/apd.o metrics/hp/hp.o metrics/dmsp/dmsp.o metrics/ims/ims.o metrics/dlsp/dlsp.o metrics/apo/apo.o
+
+# HEADERS es una lista  de archivos de cabezera o interfaces para importar modulos 
+HEADERS_UTILS = utils/csv_convert.h utils/get_sales_by_pizza.h utils/get_unique_dates_data.h
+HEADERS_METRICS = metrics/pms/pms.h metrics/pls/pls.h metrics/dms/dms.h metrics/dls/dls.h metrics/apd/apd.h metrics/hp/hp.h metrics/dmsp/dmsp.h metrics/ims/ims.h metrics/dlsp/dlsp.h metrics/apo/apo.h
+# Regla para compilar el programa
+all: app1 clean_objects
+
+app1: $(OBJECTS) $(OBJECTS_UTILS) $(OBJECTS_METRICS)
+	$(COMPILER) $(OBJECTS) $(OBJECTS_UTILS) $(OBJECTS_METRICS) -o app1
+
+main.o: main.c 
+	$(COMPILER) $(COMPILER_FLAGS) -c main.c
+
+utils/csv_convert.o: utils/csv_convert.c utils/csv_convert.h
+	$(COMPILER) $(COMPILER_FLAGS) -c utils/csv_convert.c -o utils/csv_convert.o
+
+utils/get_sales_by_pizza.o: utils/get_sales_by_pizza.c utils/get_sales_by_pizza.h
+	$(COMPILER) $(COMPILER_FLAGS) -c utils/get_sales_by_pizza.c -o utils/get_sales_by_pizza.o
+
+utils/get_unique_dates_data.o: utils/get_unique_dates_data.c utils/get_unique_dates_data.h
+	$(COMPILER) $(COMPILER_FLAGS) -c utils/get_unique_dates_data.c -o utils/get_unique_dates_data.o
+
+metrics/pms/pms.o: metrics/pms/pms.c metrics/pms/pms.h
+	$(COMPILER) $(COMPILER_FLAGS) -c metrics/pms/pms.c -o metrics/pms/pms.o
+
+metrics/pls/pls.o: metrics/pls/pls.c metrics/pls/pls.h
+	$(COMPILER) $(COMPILER_FLAGS) -c metrics/pls/pls.c -o metrics/pls/pls.o
+
+metrics/dms/dms.o: metrics/dms/dms.c metrics/dms/dms.h
+	$(COMPILER) $(COMPILER_FLAGS) -c metrics/dms/dms.c -o metrics/dms/dms.o
+
+metrics/dls/dls.o: metrics/dls/dls.c metrics/dls/dls.h
+	$(COMPILER) $(COMPILER_FLAGS) -c metrics/dls/dls.c -o metrics/dls/dls.o
+
+metrics/apd/apd.o: metrics/apd/apd.c metrics/apd/apd.h
+	$(COMPILER) $(COMPILER_FLAGS) -c metrics/apd/apd.c -o metrics/apd/apd.o
+
+metrics/hp/hp.o: metrics/hp/hp.c metrics/hp/hp.h
+	$(COMPILER) $(COMPILER_FLAGS) -c metrics/hp/hp.c -o metrics/hp/hp.o
+
+metrics/dmsp/dmsp.o: metrics/dmsp/dmsp.c metrics/dmsp/dmsp.h
+	$(COMPILER) $(COMPILER_FLAGS) -c metrics/dmsp/dmsp.c -o metrics/dmsp/dmsp.o
+
+metrics/ims/ims.o: metrics/ims/ims.c metrics/ims/ims.h
+	$(COMPILER) $(COMPILER_FLAGS) -c metrics/ims/ims.c -o metrics/ims/ims.o
+
+metrics/dlsp/dlsp.o: metrics/dlsp/dlsp.c metrics/dlsp/dlsp.h
+	$(COMPILER) $(COMPILER_FLAGS) -c metrics/dlsp/dlsp.c -o metrics/dlsp/dlsp.o
+
+metrics/apo/apo.o: metrics/apo/apo.c metrics/apo/apo.h
+	$(COMPILER) $(COMPILER_FLAGS) -c metrics/apo/apo.c -o metrics/apo/apo.o
+
+clean_objects:
+	find . -type f -name "*.o" -exec rm -f {} \;
+
+clean:
+	find . -type f -name "*.o" -exec rm -f {} \;
+	rm -f app1

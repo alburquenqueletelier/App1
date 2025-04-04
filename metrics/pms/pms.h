@@ -1,8 +1,8 @@
 #ifndef PMS_H
 #define PMS_H
 
-#include "../../types/sales.h"
+#include "../../types/orders.h"
 
-void pms(Sale *sales, int index);
+void pms(Order *orders, int index);
 
 #endif

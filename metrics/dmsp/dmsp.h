@@ -1,7 +1,7 @@
 #ifndef DMSP_H
 #define DMSP_H
-#include "../../types/dates.h"
+#include "../../types/orders.h"
 
-void dmsp(Date_sale *dates, int index);
+void dmsp(Order *orders, int index);
 
 #endif

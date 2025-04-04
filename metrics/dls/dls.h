@@ -1,7 +1,7 @@
 #ifndef DLS_H
 #define DLS_H
-#include "../../types/dates.h"
+#include "../../types/orders.h"
 
-void dls(Date_sale *sales, int index);
+void dls(Order *orders, int index);
 
 #endif

@@ -1,7 +1,7 @@
 #ifndef DMS_H
 #define DMS_H
-#include "../../types/dates.h"
+#include "../../types/orders.h"
 
-void dms(Date_sale *dates, int index);
+void dms(Order *orders, int index);
 
 #endif
