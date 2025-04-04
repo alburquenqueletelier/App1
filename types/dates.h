@@ -4,7 +4,7 @@
 
 typedef struct Date_sale
 {
-    char order_date[10];
+    char order_date[11];
     float income;
     int quantity;
 } Date_sale;
