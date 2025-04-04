@@ -34,7 +34,7 @@ OBJECTS_METRICS = metrics/pms/pms.o metrics/pls/pls.o metrics/dms/dms.o metrics/
 HEADERS_UTILS = utils/csv_convert.h utils/get_sales_by_pizza.h utils/get_unique_dates_data.h
 HEADERS_METRICS = metrics/pms/pms.h metrics/pls/pls.h metrics/dms/dms.h metrics/dls/dls.h metrics/apd/apd.h metrics/hp/hp.h metrics/dmsp/dmsp.h metrics/ims/ims.h metrics/dlsp/dlsp.h metrics/apo/apo.h
 # Regla para compilar el programa
-all: app1 clean_objects
+all: app1 
 
 app1: $(OBJECTS) $(OBJECTS_UTILS) $(OBJECTS_METRICS)
 	$(COMPILER) $(OBJECTS) $(OBJECTS_UTILS) $(OBJECTS_METRICS) -o app1

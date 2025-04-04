@@ -31,16 +31,17 @@ int main(int argc, char *argv[]) {
     csv_convert(argv[1], &orders, &index);
 
 
-    //Puntero a funcion
+    //Array de punteros a funciones para luego seleccionarlas
     void (*metrics[])(Order *orders, int index) = {apd,apo,dls,dlsp,dms,dmsp,hp,ims,pls,pms};
+    //Nombres de metricas
     char *metric_names[] = {"apd","apo","dls","dlsp","dms","dmsp","hp","ims","pls","pms"};
-
+    //Cantidad de metricas
     int metrics_count = sizeof(metrics)/sizeof(metrics[0]);
 
-
-    // Ejecutar las métricas en el orden que se ingresaron en argv
+    //Puntero que elegira la metrica
     void (*metric_selector)(Order *orders, int index);
 
+    // Seleccionar metricas para imprimir mediante puntero a funcion 
     for(int argv_i = 2; argv_i<argc;argv_i++) {
         for(int i = 0; i < metrics_count; i++){
             if((strcmp(argv[argv_i],metric_names[i])) == 0){
@@ -53,22 +54,6 @@ int main(int argc, char *argv[]) {
 
     }
 
-    // Esto es solo para ver que se imprimen los datos. Notar que no se imprimen los headers, esta ok.
-    // for(int i = 0; i < index; i++){
-    //     printf("%d,%d,%s,%d,%s,%s,%f,%f,%s,%s,%s,%s\n" ,
-    //     orders[i].pizza_id,
-    //     orders[i].order_id,
-    //     orders[i].pizza_name_id,
-    //     orders[i].quantity,
-    //     orders[i].order_date,
-    //     orders[i].order_time,
-    //     orders[i].unit_price,
-    //     orders[i].total_price,
-    //     orders[i].pizza_size,
-    //     orders[i].pizza_category,
-    //     orders[i].pizza_ingredients,
-    //     orders[i].pizza_name);
-    // }
     free(orders);
 
     return 0;
