@@ -31,61 +31,26 @@ int main(int argc, char *argv[]) {
     csv_convert(argv[1], &orders, &index);
 
 
-    //Punteros a funcion
+    //Puntero a funcion
+    void (*metrics[])(Order *orders, int index) = {apd,apo,dls,dlsp,dms,dmsp,hp,ims,pls,pms};
+    char *metric_names[] = {"apd","apo","dls","dlsp","dms","dmsp","hp","ims","pls","pms"};
+
+    int metrics_count = sizeof(metrics)/sizeof(metrics[0]);
+
 
     // Ejecutar las métricas en el orden que se ingresaron en argv
-    for(int argv_i=2; argv_i<argc; argv_i++){
-        // pms: Pizza más vendida
-        if (strcmp(argv[argv_i],"pms") == 0){
-            pms(orders, index);
-        }
-        
-        // pls: Pizza menos vendida
-        if (strcmp(argv[argv_i],"pls") == 0){
-            pls(orders, index);
+    void (*metric_selector)(Order *orders, int index);
+
+    for(int argv_i = 2; argv_i<argc;argv_i++) {
+        for(int i = 0; i < metrics_count; i++){
+            if((strcmp(argv[argv_i],metric_names[i])) == 0){
+                metric_selector = metrics[i];
+                metric_selector(orders,index);
+                break;
+            }
+
         }
 
-        // dms: Día más vendido
-        if (strcmp(argv[argv_i], "dms") == 0){
-            dms(orders, index);
-        }
-        
-        // dls: Día menos vendido
-        if (strcmp(argv[argv_i], "dls") == 0){
-            dls(orders, index);
-        }
-        // hp: Cantidad de pizzas vendidas por categoria
-        if(strcmp(argv[argv_i], "hp") == 0){
-            hp(orders, index);
-        }
-
-        // apd: Cantidad de pizzas promedio por dia
-        if(strcmp(argv[argv_i], "apd") == 0){
-            apd(orders, index);
-        }
-
-        // dmsp: Fecha con más ventas en términos de cantidad de pizza
-        if (strcmp(argv[argv_i], "dmsp") == 0){
-            dmsp(orders, index);
-        }
-
-        // ims: Ingrediente mas vendido
-        if(strcmp(argv[argv_i], "ims") == 0){
-            ims(orders, index);
-        }
-
-        //dlsp: Fecha con menos ventas en términos de cantidad de pizza
-        if(strcmp(argv[argv_i], "dlsp") == 0){
-           dlsp(orders, index);
-        }
-
-        //apo: Promedio de pizzas por orden
-        if(strcmp(argv[argv_i], "apo") == 0){
-            apo(orders, index);
-        }
-        // Crear las métricas y añadirlas. 
-
-        
     }
 
     // Esto es solo para ver que se imprimen los datos. Notar que no se imprimen los headers, esta ok.
