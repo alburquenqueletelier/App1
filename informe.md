@@ -189,11 +189,11 @@ En el caso del calculo de metricas aprendi bastante sobre como trabajar aprovech
 
 ### Eduardo
 1. ¿Qué fue lo más complejo o interesante de la tarea? 
-Para mi lo mas complejo fue enfrentarme a un lenguaje de programacion el cual nunca habia utilizado y en el cual ¿, gracias a mis compañeros púde entender lo necesario para realizar el trabajo.
+Para mi lo mas complejo fue enfrentarme a un lenguaje de programación el cual nunca había utilizado y en el cual, gracias a mis compañeros pude entender lo necesario para realizar el trabajo.
 2. ¿Cómo enfrentaron los errores, pruebas y debugging?
-Para trabajar los herrores que me aparecian me fije en la consola y me apoye de mis compañeros mas experimentados con este lenguaje.
+Para trabajar los errores que me aparecían me fijé en la consola y me apoyé de mis compañeros más experimentados con este lenguaje.
 3. ¿Qué lecciones aprendieron al implementar en C este tipo de lectura de archivos y cálculos de métricas?
-personalmente fue la estructura para generar la funcion para calcular cada metrica, a esto añadir el uso basico de el lenguaje c.
+Personalmente fue la estructura para generar la función para calcular cada métrica, a esto añadir el uso básico del lenguaje c.
 
 ### Benjamín
 1. ¿Qué fue lo más complejo o interesante de la tarea?
