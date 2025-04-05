@@ -188,9 +188,13 @@ En su mayoria los errores los afronte derechamente fijandome en los mensajes del
 En el caso del calculo de metricas aprendi bastante sobre como trabajar aprovechando la iteracion sobre arrays de structs para obtener largos y realocar la memoria de manera optima.
 
 ### Eduardo
-1. ¿Qué fue lo más complejo o interesante de la tarea?
+1. ¿Qué fue lo más complejo o interesante de la tarea? 
+Para mi lo mas complejo fue enfrentarme a un lenguaje de programacion el cual nunca habia utilizado y en el cual ¿, gracias a mis compañeros púde entender lo necesario para realizar el trabajo.
 2. ¿Cómo enfrentaron los errores, pruebas y debugging?
+Para trabajar los herrores que me aparecian me fije en la consola y me apoye de mis compañeros mas experimentados con este lenguaje.
 3. ¿Qué lecciones aprendieron al implementar en C este tipo de lectura de archivos y cálculos de métricas?
+personalmente fue la estructura para generar la funcion para calcular cada metrica, a esto añadir el uso basico de el lenguaje c.
+
 ### Benjamín
 1. ¿Qué fue lo más complejo o interesante de la tarea?
 Para mi lo más complejo fue lograr entender el como se hacian las cosas, nunca habia tenido experiencia con el lenguaje c, entonces no entendia muy bien como comenzar a hacer las cosas, en general me costo mucho el trabajo. Y lo mas interesentante fue con logré entender un poco más el lenguaje, ya que cuando lo hice comence a poder a hacer mas cosas y aportar a mi grupo de manera mas activa.

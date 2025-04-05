@@ -17,7 +17,7 @@ Profesor/a: Paulina González
 - Benjamín Vega
   - benvega@alumnos.uai.cl
 - Eduardo Rojas
-  - tuCorreoDeLaU@alumnos.uai.cl
+  - eduardorojas@alumnos.uai.cl
 
 # Compilación
 
