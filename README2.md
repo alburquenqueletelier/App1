@@ -11,7 +11,7 @@ Profesor/a: Paulina González
 # Integrantes
 
 - Joaquín Urrutia
-  - tuCorreoDeLaU@alumnos.uai.cl
+  - joaqurrutia@alumnos.uai.cl
 - Bryan Alburquenque
   - balburquenque@alumnos.uai.cl
 - Benjamín

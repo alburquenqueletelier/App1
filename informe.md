@@ -179,10 +179,14 @@ Casi no tuve errores de sintaxis gracias al pluggin de C en vs code. La mayor ca
 Que la lectura de archivos en C, si bien tiene una complejidad mayor a lenguajes de más alto nivel, dada su naturaleza permite abordar el problema de distintas formas, al permitir recorrer los datos con un buffer, usar una cadena de string con strtok, o parsear los datos y almacenarlos en una estructura como fue nuestra elección.
 En cuanto al cálculo de las métricas nos permitió entender como se pueden abordar problemas complejos de manera que se puedan dividir en problemas más pequeños. En este caso, creamos variables con información necesaria para poder encontrar lo que la métrica necesita. Por ejemplo, para encontrar la pizza más vendida, necesitamos saber la cantidad de pizzas vendidas por cada tipo de pizza. Esto transforma el problema a una función de búsqueda con criterio de maximización. 
 
-### Joaquín
+### Joaquín Urrutia
 1. ¿Qué fue lo más complejo o interesante de la tarea?
+Creo que lo mas complejo fue el enfrentarme a un proyecto de este estilo en un lenguaje de bajo nivel, el tener que aprender sobre manejo de memoria, punteros, punteros a funciones y parseo fue bastante desafiante especialmente por el poco conocimiento previo. Tambien la dinámica de tener un repositorio colaborativo nos forzó a ser mas organizados y codificar de manera mas legible.
 2. ¿Cómo enfrentaron los errores, pruebas y debugging?
+En su mayoria los errores los afronte derechamente fijandome en los mensajes del compilador. En casos de fallos de memoria, donde no había mensajes muy indicativos los traté debuggeando con printf.
 3. ¿Qué lecciones aprendieron al implementar en C este tipo de lectura de archivos y cálculos de métricas?
+En el caso del calculo de metricas aprendi bastante sobre como trabajar aprovechando la iteracion sobre arrays de structs para obtener largos y realocar la memoria de manera optima.
+
 ### Eduardo
 1. ¿Qué fue lo más complejo o interesante de la tarea?
 2. ¿Cómo enfrentaron los errores, pruebas y debugging?
