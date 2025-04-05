@@ -193,9 +193,11 @@ En el caso del calculo de metricas aprendi bastante sobre como trabajar aprovech
 3. ¿Qué lecciones aprendieron al implementar en C este tipo de lectura de archivos y cálculos de métricas?
 ### Benjamín
 1. ¿Qué fue lo más complejo o interesante de la tarea?
+Para mi lo más complejo fue lograr entender el como se hacian las cosas, nunca habia tenido experiencia con el lenguaje c, entonces no entendia muy bien como comenzar a hacer las cosas, en general me costo mucho el trabajo. Y lo mas interesentante fue con logré entender un poco más el lenguaje, ya que cuando lo hice comence a poder a hacer mas cosas y aportar a mi grupo de manera mas activa.
 2. ¿Cómo enfrentaron los errores, pruebas y debugging?
+La mayoria de errores que tuve fue en base a como se escribia en este lenguaje, ya que como mencione anteriormente no lo entendia. Me fiajaba en lo que decia en la terminal y buscaba como podia resolverlo.
 3. ¿Qué lecciones aprendieron al implementar en C este tipo de lectura de archivos y cálculos de métricas?
-
+Aprendi que se pueden usar diversas estrategias para poder afrontar un solo problema, tambien aprendi que con este lenguaje es más facil optimizar los procesos y el como se puede manejar de manera más eficiente la memoria.
 
 # Referencias
 

@@ -14,8 +14,8 @@ Profesor/a: Paulina González
   - joaqurrutia@alumnos.uai.cl
 - Bryan Alburquenque
   - balburquenque@alumnos.uai.cl
-- Benjamín
-  - tuCorreoDeLaU@alumnos.uai.cl
+- Benjamín Vega
+  - benvega@alumnos.uai.cl
 - Eduardo Rojas
   - tuCorreoDeLaU@alumnos.uai.cl
 
