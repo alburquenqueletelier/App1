@@ -1,8 +1,8 @@
-# Lenguaje y Paradigma de Programación
+# Lenguajes y Paradigmas de Programación
 
 Universidad Adolfo Ibáñez - Viña del Mar - 2025
 
-Clase: Lenguaje y Paradigma de la programación
+Clase: Lenguajes y Paradigmas de Programación
 
 Sección: 1
 
@@ -51,3 +51,4 @@ En consola ejecutar:
 
 
 Para más información sobre el uso ver el archivo [informe](informe.md)
+

@@ -10,6 +10,7 @@ typedef struct Category {
 } Category;
 
 
+// 
 void quantities_fill(Order *orders, int orders_size, int categories_size, Category *categories){
     for(int i = 0; i < categories_size; i++){
         for(int j = 0; j < orders_size;j++){

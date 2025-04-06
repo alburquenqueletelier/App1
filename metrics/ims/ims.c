@@ -7,6 +7,7 @@ typedef struct {
 	int ingredient_frequency;
 } Ingredient;
 
+// Calcular la suma de todos los ingredientes en todas las ordenes
 int ingredient_total(Order *orders, int size){
 	int total_ingredients = 0;
 	for(int i = 0; i < size; i++){
@@ -16,7 +17,7 @@ int ingredient_total(Order *orders, int size){
 	return total_ingredients;
 
 }
-
+// Inicializar el struct de ingredientes
 void initialize_ingredients(Ingredient *ingredients, int ingredients_size){
 	for(int i = 0; i < ingredients_size; i++){
 		ingredients[i].ingredient_frequency = 0;
@@ -24,7 +25,7 @@ void initialize_ingredients(Ingredient *ingredients, int ingredients_size){
 	}
 }
 
-
+// Llenar el array de structs con cada ingrediente unico y las veces que aparece. Retornar cantidad de ingredientes unicos
 int ingredient_array_fill(Order *orders, int orders_size, Ingredient *ingredients, int ingredients_size){
 
 	int unique_ingredients_count = 0;
@@ -40,16 +41,12 @@ int ingredient_array_fill(Order *orders, int orders_size, Ingredient *ingredient
 				if(strcmp(ingredients[k].ingredient_name, "Null") == 0){
 					strcpy(ingredients[k].ingredient_name , orders[i].pizza_ingredients[j]);
 					ingredients[k].ingredient_frequency++;
+                    unique_ingredients_count++;
 					break;
 				}
 			}
 			
 		}
-	}
-	int i = 0;
-	while(strcmp(ingredients[i].ingredient_name, "Null") != 0){
-		unique_ingredients_count++;
-		i++;
 	}
 
 	return unique_ingredients_count;

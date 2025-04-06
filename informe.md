@@ -1,6 +1,6 @@
 # Introducción
 
-La presenta aplicación permite conocer distintas métricas acerca de las ventas de pizza. Recibe un archivo csv que parsea, almacena en la memoria, y ejecuta las operaciones solicitadas por el usuario. Luego imprime en consola cada uno de los resultados.
+La presente aplicación permite conocer distintas métricas acerca de las ventas de pizza. Recibe un archivo csv que parsea, almacena en la memoria y ejecuta las operaciones solicitadas por el usuario. Luego imprime en consola cada uno de los resultados.
 
 ## Requerimientos:
 - C
@@ -32,11 +32,11 @@ La presenta aplicación permite conocer distintas métricas acerca de las ventas
 
 Se decidió dar al proyecto un diseño del tipo MVC, donde main es el controlador y la vista vendría siendo la terminal.
 
-El parseo del csv se hizo de tal forma de almacenar la información en estructuras de datos que faciliten la búsqueda y el cálculo de las métricas solicitadas. Estamos concientes de que esta solución puede no ser la más eficiente en términos de memoria, pero se optó por esta opción para facilitar la implementación de las métricas al generar variables similares a las que se usan en el lenguaje de programación Python (con el cual los desarrolladores de esta app están todos familiarizados)
+El parseo del csv se hizo de tal forma de almacenar la información en estructuras de datos que faciliten la búsqueda y el cálculo de las métricas solicitadas. Estamos conscientes de que esta solución puede no ser la más eficiente en términos de memoria, pero se optó por esta opción para facilitar la implementación de las métricas al generar variables similares a las que se usan en el lenguaje de programación Python (con el cual los desarrolladores de esta app están todos familiarizados)
 
 ### Estructura
 
-Para mantener el orden y las responsabilidades definidas para cada función se determinó estructurar el proyecto de la siguiente forma: 
+Para mantener el orden y las responsabilidades definidas para cada función se determinó estructurar el proyecto de la siguiente forma:
 
 root: contiene archivo main, archivo csv, los makefile, README.md e informe. Viene también con el binario compilado con gcc en Linux.
 metrics: contiene las funciones que calculan las métricas solicitadas.
@@ -48,50 +48,50 @@ Esto permitió que:
 - Cada integrante pudiese trabajar en una métrica sin preocuparse de afectar a los demás.
 - Tener una parte centralizada que instancia las variables, en este caso, main, y que maneje la entrada y salida de datos.
 
-#### Arbol del proyecto
+#### Árbol del proyecto
 ```
 └── 📁App1
-    └── 📁metrics
-        └── 📁apd
-            └── apd.c
-            └── apd.h
-        └── 📁dls
-            └── dls.c
-            └── dls.h
-        └── 📁dms
-            └── dms.c
-            └── dms.h
-        └── 📁hp
-            └── hp.c
-            └── hp.h
-        └── 📁pls
-            └── pls.c
-            └── pls.h
-        └── 📁pms
-            └── pms.c
-            └── pms.h
-    └── 📁types
-        └── dates.h
-        └── orders.h
-        └── sales.h
-    └── 📁utils
-        └── csv_convert.c
-        └── csv_convert.h
-        └── get_sales_by_pizza.c
-        └── get_sales_by_pizza.h
-        └── get_unique_dates_data.c
-        └── get_unique_dates_data.h
-    └── .gitignore
-    └── app1
-    └── diagrama_flujo.jpg
-    └── informe.md
-    └── main.c
-    └── makefile-L
-    └── makefile-W
-    └── README.md
-    └── README2.md
-    └── ventas_large.csv
-    └── ventas.csv
+	└── 📁metrics
+    	└── 📁apd
+        	└── apd.c
+        	└── apd.h
+    	└── 📁dls
+        	└── dls.c
+        	└── dls.h
+    	└── 📁dms
+        	└── dms.c
+        	└── dms.h
+    	└── 📁hp
+        	└── hp.c
+        	└── hp.h
+    	└── 📁pls
+        	└── pls.c
+        	└── pls.h
+    	└── 📁pms
+        	└── pms.c
+        	└── pms.h
+	└── 📁types
+    	└── dates.h
+    	└── orders.h
+    	└── sales.h
+	└── 📁utils
+    	└── csv_convert.c
+    	└── csv_convert.h
+    	└── get_sales_by_pizza.c
+    	└── get_sales_by_pizza.h
+    	└── get_unique_dates_data.c
+    	└── get_unique_dates_data.h
+	└── .gitignore
+	└── app1
+	└── diagrama_flujo.jpg
+	└── informe.md
+	└── main.c
+	└── makefile-L
+	└── makefile-W
+	└── README.md
+	└── README2.md
+	└── ventas_large.csv
+	└── ventas.csv
 ```
 
 # Instalación y consumo app
@@ -119,7 +119,7 @@ En windows ejecutar:
 make -f makefile-W
 ```
 
-**Nota: No tiene soporte en mac. Podría no funcionar o subrir errores.**
+**Nota: No tiene soporte en mac. Podría no funcionar o sufrir errores.**
 
 ## Ejecución
 
@@ -134,24 +134,24 @@ En consola ejecutar:
 ```
 
 **Importante:**
-- El archivo csv es el primero que debe agregar en la llamda de la aplicación.
+- El archivo csv es el primero que debe agregar en la llamada de la aplicación.
 - Puede agregar tantas métricas como las que están soportadas.
 - Las métricas son case sensitive, pueden ser ingresadas en cualquier orden y deben estar separadas por un espacio.
 
 ## Resumen
 
-| Metrica | Descripción                                              | Respuesta                                                                   |
+| Métrica | Descripción                                          	| Respuesta                                                               	|
 | ------- | -------------------------------------------------------- | --------------------------------------------------------------------------- |
-| pms     | Pizza más vendida en unidades                            | Pizza más vendida: <Nombre Pizza>, Cantidad: <Cantidad>                     |
-| pls     | Pizza más vendida en unidades                            | Pizza menos vendida: <Nombre Pizza>, Cantidad: <Cantidad>                   |
-| dms     | Fecha con más ventas en términos de dinero               | Fecha con más ventas: <dd-mm-aaaa>, Ganancia: $<Ganancia>                   |
-| dls     | Fecha con menos ventas en términos de dinero             | Fecha con menos ventas: <dd-mm-aaaa>, Ganancia: $<Ganancia>                 |
-| dmsp    | Fecha con más ventas en términos de cantidad de pizzas   | Fecha con más ventas: <dd-mm-aaaa>, Ganancia: $<Ganancia>                   |
-| dlsp    | Fecha con menos ventas en términos de cantidad de pizzas | Fecha con menos ventas: <dd-mm-aaaa>, Ganancia: $<Ganancia>                 |
-| apo     | Promedio de pizzas por orden                             | Promedio de pizzas vendidas por orden: <Promedio>                           |
-| apd     | Promedio de pizzas por día                               | Promedio de pizzas vendidas por día: <Promedio>                             |
-| ims     | Ingrediente más vendido                                  | Ingrediente más vendido: <Ingrediente>                                      |
-| hp      | Cantidad de pizzas por categoría vendidas                | <Nombre Pizza> venvidas: <Cantidad>, \n <Nombre Pizza> vendidas: <Cantidad> |
+| pms 	| Pizza más vendida en unidades                        	| Pizza más vendida: <Nombre Pizza>, Cantidad: <Cantidad>                 	|
+| pls 	| Pizza más vendida en unidades                        	| Pizza menos vendida: <Nombre Pizza>, Cantidad: <Cantidad>               	|
+| dms 	| Fecha con más ventas en términos de dinero           	| Fecha con más ventas: <dd-mm-aaaa>, Ganancia: $<Ganancia>               	|
+| dls 	| Fecha con menos ventas en términos de dinero         	| Fecha con menos ventas: <dd-mm-aaaa>, Ganancia: $<Ganancia>             	|
+| dmsp	| Fecha con más ventas en términos de cantidad de pizzas   | Fecha con más ventas: <dd-mm-aaaa>, Ganancia: $<Ganancia>               	|
+| dlsp	| Fecha con menos ventas en términos de cantidad de pizzas | Fecha con menos ventas: <dd-mm-aaaa>, Ganancia: $<Ganancia>             	|
+| apo 	| Promedio de pizzas por orden                         	| Promedio de pizzas vendidas por orden: <Promedio>                       	|
+| apd 	| Promedio de pizzas por día                           	| Promedio de pizzas vendidas por día: <Promedio>                         	|
+| ims 	| Ingrediente más vendido                              	| Ingrediente más vendido: <Ingrediente>                                  	|
+| hp  	| Cantidad de pizzas por categoría vendidas            	| <Nombre Pizza> vendidas: <Cantidad>, \n <Nombre Pizza> vendidas: <Cantidad> |
 
 ## Limpieza
 
@@ -170,26 +170,26 @@ make -f makefile-W clean
 #### Bryan Alburquenque
 
 1. ¿Qué fue lo más complejo o interesante de la tarea?
-Personalmente fue mantener una complejidad espacial para no ser ineficiente en el uso de la memoria. Teniamos la idea de optimizar recursos desde el principio, no obstante, no se justificaba en todos los casos en cuanto a que incrementa considerablemente la dificultad del desarrollo y que además existen campos del csv cuyo valor máximo es conocido de antemano como el caso de la fecha. 
+Personalmente fue mantener una complejidad espacial para no ser ineficiente en el uso de la memoria. Teníamos la idea de optimizar recursos desde el principio, no obstante, no se justificaba en todos los casos en cuanto a que incrementa considerablemente la dificultad del desarrollo y que además existen campos del csv cuyo valor máximo es conocido de antemano como el caso de la fecha.
 
 2. ¿Cómo enfrentaron los errores, pruebas y debugging?
-Casi no tuve errores de sintaxis gracias al pluggin de C en vs code. La mayor cantidad de incidentes y warnings surgían a la hora de compilar o de lleno en la ejecución del código. Esto nos hizo definir un flujo de trabajo que consiste en que cada developer desarrolla su función, compila, prueba que funcionen todas las métricas existentes y si tiene éxito entonces recién ahí puede hacer un push. En cuanto a la compilación se hizo grata gracias a las flags -wall y -g que permitían principalmente conocer variables sin uso, warnings de tipos, entre otros. 
+Casi no tuve errores de sintaxis gracias al plugin de C en vs code. La mayor cantidad de incidentes y warnings surgían a la hora de compilar o de lleno en la ejecución del código. Esto nos hizo definir un flujo de trabajo que consiste en que cada developer desarrolla su función, compila, prueba que funcionen todas las métricas existentes y si tiene éxito entonces recién ahí puede hacer un push. En cuanto a la compilación se hizo grata gracias a las flags -wall y -g que permitían principalmente conocer variables sin uso, warnings de tipos, entre otros.
 
 3. ¿Qué lecciones aprendieron al implementar en C este tipo de lectura de archivos y cálculos de métricas?
 Que la lectura de archivos en C, si bien tiene una complejidad mayor a lenguajes de más alto nivel, dada su naturaleza permite abordar el problema de distintas formas, al permitir recorrer los datos con un buffer, usar una cadena de string con strtok, o parsear los datos y almacenarlos en una estructura como fue nuestra elección.
-En cuanto al cálculo de las métricas nos permitió entender como se pueden abordar problemas complejos de manera que se puedan dividir en problemas más pequeños. En este caso, creamos variables con información necesaria para poder encontrar lo que la métrica necesita. Por ejemplo, para encontrar la pizza más vendida, necesitamos saber la cantidad de pizzas vendidas por cada tipo de pizza. Esto transforma el problema a una función de búsqueda con criterio de maximización. 
+En cuanto al cálculo de las métricas nos permitió entender cómo se pueden abordar problemas complejos de manera que se puedan dividir en problemas más pequeños. En este caso, creamos variables con información necesaria para poder encontrar lo que la métrica necesita. Por ejemplo, para encontrar la pizza más vendida, necesitamos saber la cantidad de pizzas vendidas por cada tipo de pizza. Esto transforma el problema a una función de búsqueda con criterio de maximización.
 
 ### Joaquín Urrutia
 1. ¿Qué fue lo más complejo o interesante de la tarea?
-Creo que lo mas complejo fue el enfrentarme a un proyecto de este estilo en un lenguaje de bajo nivel, el tener que aprender sobre manejo de memoria, punteros, punteros a funciones y parseo fue bastante desafiante especialmente por el poco conocimiento previo. Tambien la dinámica de tener un repositorio colaborativo nos forzó a ser mas organizados y codificar de manera mas legible.
+Creo que lo más complejo fue el enfrentarme a un proyecto de este estilo en un lenguaje de bajo nivel, el tener que aprender sobre manejo de memoria, punteros, punteros a funciones y parseo fue bastante desafiante especialmente por el poco conocimiento previo. También la dinámica de tener un repositorio colaborativo nos forzó a ser más organizados y codificar de manera más legible.
 2. ¿Cómo enfrentaron los errores, pruebas y debugging?
-En su mayoria los errores los afronte derechamente fijandome en los mensajes del compilador. En casos de fallos de memoria, donde no había mensajes muy indicativos los traté debuggeando con printf.
+En su mayoría los errores los afronté derechamente fijándome en los mensajes del compilador. En casos de fallos de memoria, donde no había mensajes muy indicativos los traté debuggeando con printf.
 3. ¿Qué lecciones aprendieron al implementar en C este tipo de lectura de archivos y cálculos de métricas?
-En el caso del calculo de metricas aprendi bastante sobre como trabajar aprovechando la iteracion sobre arrays de structs para obtener largos y realocar la memoria de manera optima.
+En el caso del cálculo de métricas aprendí bastante sobre cómo trabajar aprovechando la iteración sobre arrays de structs para obtener largos y realocar la memoria de manera óptima.
 
 ### Eduardo
-1. ¿Qué fue lo más complejo o interesante de la tarea? 
-Para mi lo mas complejo fue enfrentarme a un lenguaje de programación el cual nunca había utilizado y en el cual, gracias a mis compañeros pude entender lo necesario para realizar el trabajo.
+1. ¿Qué fue lo más complejo o interesante de la tarea?
+Para mi lo más complejo fue enfrentarme a un lenguaje de programación el cual nunca había utilizado y en el cual, gracias a mis compañeros pude entender lo necesario para realizar el trabajo.
 2. ¿Cómo enfrentaron los errores, pruebas y debugging?
 Para trabajar los errores que me aparecían me fijé en la consola y me apoyé de mis compañeros más experimentados con este lenguaje.
 3. ¿Qué lecciones aprendieron al implementar en C este tipo de lectura de archivos y cálculos de métricas?
@@ -197,11 +197,11 @@ Personalmente fue la estructura para generar la función para calcular cada mét
 
 ### Benjamín
 1. ¿Qué fue lo más complejo o interesante de la tarea?
-Para mi lo más complejo fue lograr entender el como se hacian las cosas, nunca habia tenido experiencia con el lenguaje c, entonces no entendia muy bien como comenzar a hacer las cosas, en general me costo mucho el trabajo. Y lo mas interesentante fue con logré entender un poco más el lenguaje, ya que cuando lo hice comence a poder a hacer mas cosas y aportar a mi grupo de manera mas activa.
+Para mi lo más complejo fue lograr entender el cómo se hacían las cosas, nunca había tenido experiencia con el lenguaje c, entonces no entendía muy bien como comenzar a hacer las cosas, en general me costó mucho el trabajo. Y lo más interesante fue que logré entender un poco más el lenguaje, ya que cuando lo hice comencé a poder a hacer más cosas y aportar a mi grupo de manera más activa.
 2. ¿Cómo enfrentaron los errores, pruebas y debugging?
-La mayoria de errores que tuve fue en base a como se escribia en este lenguaje, ya que como mencione anteriormente no lo entendia. Me fiajaba en lo que decia en la terminal y buscaba como podia resolverlo.
+La mayoría de errores que tuve fue en base a cómo se escribía en este lenguaje, ya que como mencioné anteriormente no lo entendía. Me fijaba en lo que decía en la terminal y buscaba cómo podría resolverlo.
 3. ¿Qué lecciones aprendieron al implementar en C este tipo de lectura de archivos y cálculos de métricas?
-Aprendi que se pueden usar diversas estrategias para poder afrontar un solo problema, tambien aprendi que con este lenguaje es más facil optimizar los procesos y el como se puede manejar de manera más eficiente la memoria.
+Aprendí que se pueden usar diversas estrategias para poder afrontar un solo problema, tambien aprendi que con este lenguaje es más fácil optimizar los procesos y el cómo se puede manejar de manera más eficiente la memoria.
 
 # Referencias
 
@@ -211,3 +211,4 @@ Aprendi que se pueden usar diversas estrategias para poder afrontar un solo prob
 - [Learn Microsoft](https://learn.microsoft.com/) Para aprender sobre funciones en librerías stdio y string.
 - [Markdown](https://markdown.es) Para aprender sintaxis markdown.
 - [StackEdit](https://stackedit.io) Para visualizar sintaxis markdown.
+
