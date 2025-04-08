@@ -55,10 +55,19 @@ int ingredient_array_fill(Order *orders, int orders_size, Ingredient *ingredient
 
 // Ingrediente más vendido
 void ims(Order *orders, int size){
+	// string de ingrediente mas vendido
 	char most_sold_ingredient[40];
+
+	// obtener numero de ingredientes
 	int ingredients_size = ingredient_total(orders,size);
+
+	// crear array de structs de ingredientes
 	Ingredient ingredients[ingredients_size];
+	
+	// inicializar valores de ingredients
 	initialize_ingredients(ingredients, ingredients_size);
+
+	// llenar nombres de ingredientes y cantidad de ventas de ingrediente
 	int unique_ingredients_count = ingredient_array_fill(orders, size, ingredients, ingredients_size);
 
 	//calcular ims ;
