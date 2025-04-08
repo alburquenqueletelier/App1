@@ -53,7 +53,7 @@ int ingredient_array_fill(Order *orders, int orders_size, Ingredient *ingredient
 
 }
 
-
+// Ingrediente más vendido
 void ims(Order *orders, int size){
 	char most_sold_ingredient[40];
 	int ingredients_size = ingredient_total(orders,size);

@@ -5,6 +5,7 @@
 #include "../../types/orders.h"
 #include "../../utils/get_unique_dates_data.h"
 
+// Promedio de pizzas al día en unidades de pizzas
 void apd(Order *orders, int index) {
 
     Date_sale *dates=malloc(sizeof(Date_sale)*index);   // Se reajusta la memoria en la función

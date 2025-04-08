@@ -5,7 +5,7 @@
 #include "../../types/orders.h"
 #include "../../utils/get_unique_dates_data.h"
 
-
+// Día con menos ventas en dinero
 void dls(Order *orders, int index){
     Date_sale *dates=malloc(sizeof(Date_sale)*index);   // Se reajusta la memoria en la función
     int dates_length = get_unique_dates_data(orders, &dates, index);

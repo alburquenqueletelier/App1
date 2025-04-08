@@ -4,6 +4,7 @@
 #include "../../types/orders.h"
 #include "../../utils/get_sales_by_pizza.h"
 
+// La pizza más vendida en cantidad
 void pms(Order *orders , int index){
     
     Sale *sales=malloc(sizeof(Sale) * index);  // Se reajusta la memoria en la función
